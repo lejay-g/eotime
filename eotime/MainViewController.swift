@@ -13,17 +13,17 @@ class MainViewController: UIViewController {
     @IBOutlet weak var time_hour: UILabel!
     @IBOutlet weak var time_minute: UILabel!
     
+    @IBOutlet weak var box: UIView!
+    
     @IBOutlet weak var year: UILabel!
-    @IBOutlet weak var month: UILabel!
-    @IBOutlet weak var day: UILabel!
-    @IBOutlet weak var hour: UILabel!
-    @IBOutlet weak var minute: UILabel!
     
     //時計
     private var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        box.layer.cornerRadius = 30
 
         self.disptimer()
        
@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
         get_hour(utime: unixtime)
     }
 
+    //エオルゼア時刻取得
     func get_hour(utime: TimeInterval){
         //エオルゼア時間60分=リアル時間175秒
         let et_seconds = utime * 60.0 / 175.0
@@ -53,19 +54,13 @@ class MainViewController: UIViewController {
         //分
         let disp_et_minute = Int(et_seconds.truncatingRemainder(dividingBy: 60.0))
         
-//        //debug
-//        year.text = String(disp_et_year)
-//        month.text = String(disp_et_month)
-//        day.text = String(disp_et_day)
-//        hour.text = String(disp_et_hour)
-//        minute.text = String(disp_et_minute)
-        
-        //disp
+        //0詰めして表示
         time_hour.text = String(format: "%02d", disp_et_hour)
         time_minute.text = String(format: "%02d", disp_et_minute)
         
     }
-    
+
+    //エオルゼア日付取得(未使用)
     func get_date(utime: TimeInterval) -> String {
         //エオルゼア時間60分=リアル時間175秒
         let et_hours = utime / 175.0

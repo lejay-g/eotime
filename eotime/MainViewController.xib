@@ -12,14 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="eotime" customModuleProvider="target">
             <connections>
-                <outlet property="day" destination="IWr-Y7-cgd" id="IUG-sB-ee8"/>
-                <outlet property="hour" destination="8N6-Zb-LvV" id="wJ1-8c-gP0"/>
-                <outlet property="minute" destination="IYd-4k-K0L" id="xlw-cp-QpR"/>
-                <outlet property="month" destination="6io-dM-AO4" id="MbA-T1-Jet"/>
+                <outlet property="box" destination="gHW-da-0T2" id="cr5-q2-6kV"/>
                 <outlet property="time_hour" destination="ooF-VT-Xzo" id="qRw-p1-Kv9"/>
                 <outlet property="time_minute" destination="j0P-pk-7Qq" id="X4T-Vr-cyv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="year" destination="bdQ-lX-nYC" id="oAc-VF-Wwl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-Yh-Bhd">
-                    <rect key="frame" x="0.0" y="273" width="414" height="350"/>
+                    <rect key="frame" x="0.0" y="398" width="414" height="100"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0st-Yr-lR4">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -85,51 +81,6 @@
                                 <constraint firstAttribute="height" constant="100" id="KnD-FT-2Rv"/>
                             </constraints>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-lX-nYC">
-                            <rect key="frame" x="0.0" y="100" width="414" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="MTU-eB-QaS"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6io-dM-AO4">
-                            <rect key="frame" x="0.0" y="150" width="414" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="Q1I-DN-9RZ"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWr-Y7-cgd">
-                            <rect key="frame" x="0.0" y="200" width="414" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="NGn-Ki-mpk"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-Zb-LvV">
-                            <rect key="frame" x="0.0" y="250" width="414" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="y5s-BQ-P4u"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYd-4k-K0L">
-                            <rect key="frame" x="0.0" y="300" width="414" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="7pg-tI-RtR"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                 </stackView>
             </subviews>
