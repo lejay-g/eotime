@@ -11,6 +11,7 @@
 		C13D052A22F3B62500CE5E09 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D052922F3B62500CE5E09 /* TodayViewController.swift */; };
 		C13D052D22F3B62500CE5E09 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13D052B22F3B62500CE5E09 /* MainInterface.storyboard */; };
 		C13D053122F3B62500CE5E09 /* eotime_today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C13D052422F3B62500CE5E09 /* eotime_today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C13D053722F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png in Resources */ = {isa = PBXBuildFile; fileRef = C13D053622F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png */; };
 		C1B3D24222F39BFD0077D0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */; };
 		C1B3D24422F39BFD0077D0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24322F39BFD0077D0B1 /* ViewController.swift */; };
 		C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D24522F39BFD0077D0B1 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		C13D052922F3B62500CE5E09 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C13D052C22F3B62500CE5E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C13D052E22F3B62500CE5E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13D053622F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png"; sourceTree = "<group>"; };
 		C1B3D23E22F39BFD0077D0B1 /* eotime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eotime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B3D24322F39BFD0077D0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				C1B3D24822F39BFD0077D0B1 /* eotime.xcdatamodeld */,
 				C1B3D25622F3A4830077D0B1 /* MainViewController.swift */,
 				C1B3D25722F3A4830077D0B1 /* MainViewController.xib */,
+				C13D053622F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png */,
 			);
 			path = eotime;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				C1B3D24F22F39BFF0077D0B1 /* LaunchScreen.storyboard in Resources */,
 				C1B3D24C22F39BFF0077D0B1 /* Assets.xcassets in Resources */,
 				C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */,
+				C13D053722F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png in Resources */,
 				C1B3D25922F3A4830077D0B1 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -105,16 +105,16 @@ class MainViewController: UIViewController {
         switch hour {
         case 0...3:
             Limit = "00:00-03:59"
-            AreaName = "休め"
-            ItemName = "休め"
+            AreaName = "ギラバニア湖畔地帯(x13,y16)"
+            ItemName = "アルマンディン(炎)"
         case 4...7:
             Limit = "04:00-07:59"
-            AreaName = "休め"
-            ItemName = "休め"
+            AreaName = "高地ドラヴァニア(x17,y27)"
+            ItemName = "レイディアントファイアグラベル(炎)"
         case 8...11:
             Limit = "08:00-11:59"
-            AreaName = "休め"
-            ItemName = "休め"
+            AreaName = "低地ドラヴァニア(x26,y24)"
+            ItemName = "レイディアントファイアグラベル(炎)"
         case 12...15:
             Limit = "12:00-15:59"
             AreaName = "アジムステップ(x29,y15)"
@@ -151,20 +151,20 @@ class MainViewController: UIViewController {
             ItemName = "クラリーセージ(風)"
         case 4...7:
             Limit = "04:00-07:59"
-            AreaName = "休め"
-            ItemName = "休め"
+            AreaName = "ギラバニア湖畔地帯(x28,y10)"
+            ItemName = "トレヤの枝(氷)"
         case 8...11:
             Limit = "08:00-11:59"
-            AreaName = "休め"
-            ItemName = "休め"
+            AreaName = "高地ドラヴァニア(x10,y32)"
+            ItemName = "メネフィナローレル(氷)"
         case 12...15:
             Limit = "12:00-15:59"
             AreaName = "休め"
             ItemName = "休め"
         case 16...19:
             Limit = "16:00-19:59"
-            AreaName = "休め"
-            ItemName = "休め"
+            AreaName = "高地ドラヴァニア(x10,y32)"
+            ItemName = "メネフィナローレル(氷)"
         case 20...24:
             Limit = "20:00-24:59"
             AreaName = "アバラシア雲海(x23,y12)"
