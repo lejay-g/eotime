@@ -44,23 +44,23 @@
                                     <rect key="frame" x="50" y="0.0" width="314" height="100"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kna-Ql-e5a">
-                                            <rect key="frame" x="70.666666666666671" y="14.666666666666686" width="172.66666666666663" height="70.666666666666671"/>
+                                            <rect key="frame" x="66.666666666666686" y="15" width="181" height="70"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-VT-Xzo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="70.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="59"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="70"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tS-s2-d7x">
-                                                    <rect key="frame" x="77.999999999999986" y="0.0" width="16.666666666666671" height="70.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="59"/>
+                                                    <rect key="frame" x="72.333333333333329" y="0.0" width="36.333333333333329" height="70"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-pk-7Qq">
-                                                    <rect key="frame" x="94.666666666666686" y="0.0" width="78" height="70.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="59"/>
+                                                    <rect key="frame" x="108.66666666666669" y="0.0" width="72.333333333333314" height="70"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
