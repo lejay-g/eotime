@@ -7,15 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13D052722F3B62500CE5E09 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13D052622F3B62500CE5E09 /* NotificationCenter.framework */; };
+		C13D052A22F3B62500CE5E09 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D052922F3B62500CE5E09 /* TodayViewController.swift */; };
+		C13D052D22F3B62500CE5E09 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13D052B22F3B62500CE5E09 /* MainInterface.storyboard */; };
+		C13D053122F3B62500CE5E09 /* eotime_today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C13D052422F3B62500CE5E09 /* eotime_today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C1B3D24222F39BFD0077D0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */; };
 		C1B3D24422F39BFD0077D0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24322F39BFD0077D0B1 /* ViewController.swift */; };
 		C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D24522F39BFD0077D0B1 /* Main.storyboard */; };
 		C1B3D24A22F39BFD0077D0B1 /* eotime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24822F39BFD0077D0B1 /* eotime.xcdatamodeld */; };
 		C1B3D24C22F39BFF0077D0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D24B22F39BFF0077D0B1 /* Assets.xcassets */; };
 		C1B3D24F22F39BFF0077D0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D24D22F39BFF0077D0B1 /* LaunchScreen.storyboard */; };
+		C1B3D25822F3A4830077D0B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D25622F3A4830077D0B1 /* MainViewController.swift */; };
+		C1B3D25922F3A4830077D0B1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D25722F3A4830077D0B1 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C13D052F22F3B62500CE5E09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1B3D23622F39BFD0077D0B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C13D052322F3B62500CE5E09;
+			remoteInfo = eotime_today;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C13D053522F3B62500CE5E09 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C13D053122F3B62500CE5E09 /* eotime_today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C13D052422F3B62500CE5E09 /* eotime_today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = eotime_today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13D052622F3B62500CE5E09 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		C13D052922F3B62500CE5E09 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		C13D052C22F3B62500CE5E09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C13D052E22F3B62500CE5E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B3D23E22F39BFD0077D0B1 /* eotime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eotime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B3D24322F39BFD0077D0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,9 +59,19 @@
 		C1B3D24B22F39BFF0077D0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1B3D24E22F39BFF0077D0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1B3D25022F39BFF0077D0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B3D25622F3A4830077D0B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C1B3D25722F3A4830077D0B1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C13D052122F3B62500CE5E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13D052722F3B62500CE5E09 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1B3D23B22F39BFD0077D0B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +82,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C13D052522F3B62500CE5E09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C13D052622F3B62500CE5E09 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C13D052822F3B62500CE5E09 /* eotime_today */ = {
+			isa = PBXGroup;
+			children = (
+				C13D052922F3B62500CE5E09 /* TodayViewController.swift */,
+				C13D052B22F3B62500CE5E09 /* MainInterface.storyboard */,
+				C13D052E22F3B62500CE5E09 /* Info.plist */,
+			);
+			path = eotime_today;
+			sourceTree = "<group>";
+		};
 		C1B3D23522F39BFD0077D0B1 = {
 			isa = PBXGroup;
 			children = (
 				C1B3D24022F39BFD0077D0B1 /* eotime */,
+				C13D052822F3B62500CE5E09 /* eotime_today */,
+				C13D052522F3B62500CE5E09 /* Frameworks */,
 				C1B3D23F22F39BFD0077D0B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C1B3D23E22F39BFD0077D0B1 /* eotime.app */,
+				C13D052422F3B62500CE5E09 /* eotime_today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +129,8 @@
 				C1B3D24D22F39BFF0077D0B1 /* LaunchScreen.storyboard */,
 				C1B3D25022F39BFF0077D0B1 /* Info.plist */,
 				C1B3D24822F39BFD0077D0B1 /* eotime.xcdatamodeld */,
+				C1B3D25622F3A4830077D0B1 /* MainViewController.swift */,
+				C1B3D25722F3A4830077D0B1 /* MainViewController.xib */,
 			);
 			path = eotime;
 			sourceTree = "<group>";
@@ -70,6 +138,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C13D052322F3B62500CE5E09 /* eotime_today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13D053422F3B62500CE5E09 /* Build configuration list for PBXNativeTarget "eotime_today" */;
+			buildPhases = (
+				C13D052022F3B62500CE5E09 /* Sources */,
+				C13D052122F3B62500CE5E09 /* Frameworks */,
+				C13D052222F3B62500CE5E09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eotime_today;
+			productName = eotime_today;
+			productReference = C13D052422F3B62500CE5E09 /* eotime_today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C1B3D23D22F39BFD0077D0B1 /* eotime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1B3D25322F39BFF0077D0B1 /* Build configuration list for PBXNativeTarget "eotime" */;
@@ -77,10 +162,12 @@
 				C1B3D23A22F39BFD0077D0B1 /* Sources */,
 				C1B3D23B22F39BFD0077D0B1 /* Frameworks */,
 				C1B3D23C22F39BFD0077D0B1 /* Resources */,
+				C13D053522F3B62500CE5E09 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C13D053022F3B62500CE5E09 /* PBXTargetDependency */,
 			);
 			name = eotime;
 			productName = eotime;
@@ -97,6 +184,9 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = shokoni;
 				TargetAttributes = {
+					C13D052322F3B62500CE5E09 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					C1B3D23D22F39BFD0077D0B1 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -116,11 +206,20 @@
 			projectRoot = "";
 			targets = (
 				C1B3D23D22F39BFD0077D0B1 /* eotime */,
+				C13D052322F3B62500CE5E09 /* eotime_today */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C13D052222F3B62500CE5E09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13D052D22F3B62500CE5E09 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1B3D23C22F39BFD0077D0B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,12 +227,21 @@
 				C1B3D24F22F39BFF0077D0B1 /* LaunchScreen.storyboard in Resources */,
 				C1B3D24C22F39BFF0077D0B1 /* Assets.xcassets in Resources */,
 				C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */,
+				C1B3D25922F3A4830077D0B1 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C13D052022F3B62500CE5E09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13D052A22F3B62500CE5E09 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1B3D23A22F39BFD0077D0B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,12 +249,29 @@
 				C1B3D24422F39BFD0077D0B1 /* ViewController.swift in Sources */,
 				C1B3D24A22F39BFD0077D0B1 /* eotime.xcdatamodeld in Sources */,
 				C1B3D24222F39BFD0077D0B1 /* AppDelegate.swift in Sources */,
+				C1B3D25822F3A4830077D0B1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C13D053022F3B62500CE5E09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C13D052322F3B62500CE5E09 /* eotime_today */;
+			targetProxy = C13D052F22F3B62500CE5E09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C13D052B22F3B62500CE5E09 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13D052C22F3B62500CE5E09 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		C1B3D24522F39BFD0077D0B1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -166,6 +291,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C13D053222F3B62500CE5E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JD734J5X3;
+				INFOPLIST_FILE = eotime_today/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shokoni.eotime.eotime-today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C13D053322F3B62500CE5E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JD734J5X3;
+				INFOPLIST_FILE = eotime_today/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shokoni.eotime.eotime-today";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C1B3D25122F39BFF0077D0B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,6 +448,7 @@
 		C1B3D25422F39BFF0077D0B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JD734J5X3;
@@ -303,6 +467,7 @@
 		C1B3D25522F39BFF0077D0B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JD734J5X3;
@@ -321,6 +486,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C13D053422F3B62500CE5E09 /* Build configuration list for PBXNativeTarget "eotime_today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13D053222F3B62500CE5E09 /* Debug */,
+				C13D053322F3B62500CE5E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C1B3D23922F39BFD0077D0B1 /* Build configuration list for PBXProject "eotime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
