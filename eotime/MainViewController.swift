@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import etimeFunc
 
 class MainViewController: UIViewController {
 
@@ -42,7 +43,11 @@ class MainViewController: UIViewController {
     //時刻を更新していく
     func disptimer() {
         if !timer.isValid {
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.1,
+                                         target: self,
+                                         selector: #selector(self.updateTimer),
+                                         userInfo: nil,
+                                         repeats: true)
         }
         
     }
@@ -51,51 +56,12 @@ class MainViewController: UIViewController {
     @objc private func updateTimer() {
         //現在のunix時刻を取得
         let unixtime = NSDate().timeIntervalSince1970
-        
-        get_hour(utime: unixtime)
+
+        let disp_time = etime(utime: unixtime)
+        time_hour.text = disp_time.get_hour()
+        time_minute.text = disp_time.get_minute()
     }
 
-    //エオルゼア時刻取得＆表示
-    func get_hour(utime: TimeInterval){
-        //エオルゼア時間60分=リアル時間175秒
-        let et_seconds = utime * 60.0 / 175.0
-        let et_hours = utime / 175.0
-        //時
-        let disp_et_hour = Int(et_hours.truncatingRemainder(dividingBy: 24.0))
-        //分
-        let disp_et_minute = Int(et_seconds.truncatingRemainder(dividingBy: 60.0))
-        
-        //0詰めして表示
-        time_hour.text = String(format: "%02d", disp_et_hour)
-        time_minute.text = String(format: "%02d", disp_et_minute)
-        
-        //取得アイテムの表示もここでする
-        get_MiningItem(hour: disp_et_hour)
-        get_LoggingItem(hour: disp_et_hour)
-
-    }
-
-    //エオルゼア日付取得(未使用)
-    func get_date(utime: TimeInterval) -> String {
-        //エオルゼア時間60分=リアル時間175秒
-        let et_hours = utime / 175.0
-        //エオルゼア1日24時間
-        let et_days = et_hours / 24.0
-        //エオルゼア1ヶ月32日
-        let et_months = et_days / 32.0
-        
-        //年
-        let disp_et_year = Int(et_months / 12.0 + 1.0)
-        //月
-        let disp_et_month = Int(et_months.truncatingRemainder(dividingBy: 12.0) + 1.0)
-        //日
-        let disp_et_day = Int(et_days.truncatingRemainder(dividingBy: 32.0) + 1.0)
-        
-        let ret_disp = String(disp_et_year) + "-" + String(disp_et_month) + "-" + String(disp_et_day)
-
-        return ret_disp
-
-    }
     
     //採掘アイテム
     func get_MiningItem(hour: Int) {

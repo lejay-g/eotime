@@ -36,7 +36,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
                     <connections>
-                        <outlet property="etime" destination="GcN-lo-r42" id="sZc-vm-cO2"/>
+                        <outlet property="eotime" destination="GcN-lo-r42" id="P2N-ta-C7X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
