@@ -177,15 +177,36 @@ class MainViewController: UIViewController {
         var crystal: CGColor
         switch color {
         case "炎":
+            //#c97586
             crystal = UIColor.red.cgColor
+            crystal = UIColor(red: 201/255,
+                              green: 117/255,
+                              blue: 134/255,
+                              alpha: 1).cgColor
         case "氷":
-            crystal = UIColor.blue.cgColor
+            //#eaedf7
+            crystal = UIColor(red: 234/255,
+                              green: 237/255,
+                              blue: 247/255,
+                              alpha: 1).cgColor
         case "風":
-            crystal = UIColor.green.cgColor
+            //#d6e9ca
+            crystal = UIColor(red: 216/255,
+                              green: 233/255,
+                              blue: 202/255,
+                              alpha: 1).cgColor
         case "雷":
-            crystal = UIColor.purple.cgColor
+            //#a59aca
+            crystal = UIColor(red: 165/255,
+                              green: 154/255,
+                              blue: 202/255,
+                              alpha: 1).cgColor
         case "土":
-            crystal = UIColor.brown.cgColor
+            //#f2c9ac
+            crystal = UIColor(red: 242/255,
+                              green: 201/255,
+                              blue: 172/255,
+                              alpha: 1).cgColor
         default:
             crystal = UIColor.lightGray.cgColor
         }
@@ -200,6 +221,7 @@ class MainViewController: UIViewController {
             self.mining.layer.borderColor = UIColor.clear.cgColor
         }
     }
+    
     /*
     // MARK: - Navigation
 
