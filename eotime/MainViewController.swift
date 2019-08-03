@@ -13,16 +13,15 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var time_hour: UILabel!
     @IBOutlet weak var time_minute: UILabel!
+    @IBOutlet weak var time_limit: UILabel!
     
     @IBOutlet weak var box: UIView!
     @IBOutlet weak var mining: UIView!
     @IBOutlet weak var Logging: UIView!
     
-    @IBOutlet weak var mining_limit: UILabel!
     @IBOutlet weak var mining_area: UILabel!
     @IBOutlet weak var mining_item: UILabel!
     
-    @IBOutlet weak var logging_limit: UILabel!
     @IBOutlet weak var logging_area: UILabel!
     @IBOutlet weak var logging_item: UILabel!
     
@@ -35,6 +34,9 @@ class MainViewController: UIViewController {
         box.layer.cornerRadius = 30
         mining.layer.cornerRadius = 30
         Logging.layer.cornerRadius = 30
+
+        mining.layer.borderWidth = 10
+        Logging.layer.borderWidth = 10
 
         self.disptimer()
        
@@ -52,7 +54,7 @@ class MainViewController: UIViewController {
         
     }
     
-    //時刻表示
+    //表示更新
     @objc private func updateTimer() {
         //現在のunix時刻を取得
         let unixtime = NSDate().timeIntervalSince1970
@@ -60,6 +62,25 @@ class MainViewController: UIViewController {
         let disp_time = etime(utime: unixtime)
         time_hour.text = disp_time.get_hour()
         time_minute.text = disp_time.get_minute()
+        switch Int(disp_time.get_hour())! {
+        case 0...3:
+            time_limit.text = "00:00-03:59"
+        case 4...7:
+            time_limit.text = "04:00-07:59"
+        case 8...11:
+            time_limit.text = "08:00-11:59"
+        case 12...15:
+            time_limit.text = "12:00-15:59"
+        case 16...19:
+            time_limit.text = "16:00-19:59"
+        case 20...24:
+            time_limit.text = "20:00-24:59"
+        default :
+            time_limit.text = "--"
+        }
+
+        get_MiningItem(hour: Int(disp_time.get_hour())!)
+        get_LoggingItem(hour: Int(disp_time.get_hour())!)
     }
 
     
@@ -67,83 +88,117 @@ class MainViewController: UIViewController {
     func get_MiningItem(hour: Int) {
         var ItemName: String = ""
         var AreaName: String = ""
-        var Limit: String = ""
+        var Element: String = ""
+        
         switch hour {
         case 0...3:
-            Limit = "00:00-03:59"
             AreaName = "ギラバニア湖畔地帯(x13,y16)"
-            ItemName = "アルマンディン(炎)"
+            ItemName = "アルマンディン"
+            Element = "炎"
+
         case 4...7:
-            Limit = "04:00-07:59"
             AreaName = "高地ドラヴァニア(x17,y27)"
-            ItemName = "レイディアントファイアグラベル(炎)"
+            ItemName = "レイディアントファイアグラベル"
+            Element = "炎"
         case 8...11:
-            Limit = "08:00-11:59"
             AreaName = "低地ドラヴァニア(x26,y24)"
-            ItemName = "レイディアントファイアグラベル(炎)"
+            ItemName = "レイディアントファイアグラベル"
+            Element = "炎"
         case 12...15:
-            Limit = "12:00-15:59"
             AreaName = "アジムステップ(x29,y15)"
-            ItemName = "ショール(雷)"
+            ItemName = "ショール"
+            Element = "雷"
         case 16...19:
-            Limit = "16:00-19:59"
             AreaName = "アバラシア雲海(x34,y30)"
-            ItemName = "レイディアントライトニンググラベル(雷)"
+            ItemName = "レイディアントライトニンググラベル"
+            Element = "雷"
         case 20...24:
-            Limit = "20:00-24:59"
             AreaName = "クルザス西部高地(x21,y28)"
-            ItemName = "レイディアントライトニンググラベル(雷)"
+            ItemName = "レイディアントライトニンググラベル"
+            Element = "雷"
         default:
-            Limit = "00:00"
             AreaName = "--"
             ItemName = "--"
         }
         
-        mining_limit.text = Limit
         mining_area.text = AreaName
         mining_item.text = ItemName
+        
+        //枠線にクリスタルの色をつける
+        crystalColor(work: "mining", color: Element)
 
     }
+    
     
     //伐採アイテム
     func get_LoggingItem(hour: Int){
         var ItemName: String = ""
         var AreaName: String = ""
-        var Limit: String = ""
+        var Element: String = ""
         switch hour {
         case 0...3:
-            Limit = "00:00-03:59"
             AreaName = "クルザス西部高地(x10,y14)"
-            ItemName = "クラリーセージ(風)"
+            ItemName = "クラリーセージ"
+            Element = "風"
         case 4...7:
-            Limit = "04:00-07:59"
             AreaName = "ギラバニア湖畔地帯(x28,y10)"
-            ItemName = "トレヤの枝(氷)"
+            ItemName = "トレヤの枝"
+            Element = "氷"
         case 8...11:
-            Limit = "08:00-11:59"
             AreaName = "高地ドラヴァニア(x10,y32)"
-            ItemName = "メネフィナローレル(氷)"
+            ItemName = "メネフィナローレル"
+            Element = "氷"
         case 12...15:
-            Limit = "12:00-15:59"
             AreaName = "休め"
             ItemName = "休め"
         case 16...19:
-            Limit = "16:00-19:59"
             AreaName = "高地ドラヴァニア(x10,y32)"
-            ItemName = "メネフィナローレル(氷)"
+            ItemName = "メネフィナローレル"
+            Element = "氷"
         case 20...24:
-            Limit = "20:00-24:59"
             AreaName = "アバラシア雲海(x23,y12)"
-            ItemName = "クラリーセージ(風)"
+            ItemName = "クラリーセージ"
+            Element = "風"
         default:
-            Limit = "00:00"
             AreaName = "--"
             ItemName = "--"
         }
 
-        logging_limit.text = Limit
         logging_area.text = AreaName
         logging_item.text = ItemName
+
+        //枠線にクリスタルの色をつける
+        crystalColor(work: "logging", color: Element)
+    }
+    
+    //枠線にcrystalの色を反映
+    func crystalColor(work: String, color: String) {
+        
+        var crystal: CGColor
+        switch color {
+        case "炎":
+            crystal = UIColor.red.cgColor
+        case "氷":
+            crystal = UIColor.blue.cgColor
+        case "風":
+            crystal = UIColor.green.cgColor
+        case "雷":
+            crystal = UIColor.purple.cgColor
+        case "土":
+            crystal = UIColor.brown.cgColor
+        default:
+            crystal = UIColor.lightGray.cgColor
+        }
+        
+        switch work {
+        case "logging":
+            self.Logging.layer.borderColor = crystal
+        case "mining":
+            self.mining.layer.borderColor = crystal
+        default:
+            self.Logging.layer.borderColor = UIColor.clear.cgColor
+            self.mining.layer.borderColor = UIColor.clear.cgColor
+        }
     }
     /*
     // MARK: - Navigation

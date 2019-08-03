@@ -16,12 +16,11 @@
                 <outlet property="box" destination="gHW-da-0T2" id="cr5-q2-6kV"/>
                 <outlet property="logging_area" destination="r59-W9-wa0" id="fIe-Zf-cLw"/>
                 <outlet property="logging_item" destination="oED-wl-AuM" id="Qxz-Cl-B26"/>
-                <outlet property="logging_limit" destination="T7R-bm-sDw" id="8O0-dt-Gdz"/>
                 <outlet property="mining" destination="MNm-oK-po8" id="9tO-PY-UGw"/>
                 <outlet property="mining_area" destination="IMy-2G-akN" id="pez-XS-dT0"/>
                 <outlet property="mining_item" destination="bkG-4f-ILK" id="yHr-iU-UAr"/>
-                <outlet property="mining_limit" destination="XHw-KZ-KHj" id="4va-ht-ICo"/>
                 <outlet property="time_hour" destination="ooF-VT-Xzo" id="qRw-p1-Kv9"/>
+                <outlet property="time_limit" destination="LEL-kZ-K9n" id="1oh-Yq-Ehz"/>
                 <outlet property="time_minute" destination="j0P-pk-7Qq" id="X4T-Vr-cyv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,65 +31,104 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-Yh-Bhd">
-                    <rect key="frame" x="0.0" y="168" width="414" height="560"/>
+                    <rect key="frame" x="0.0" y="143" width="414" height="610"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0st-Yr-lR4">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAA-Fo-brd" userLabel="space">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="150"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="Lca-vl-CAN"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHW-da-0T2">
-                                    <rect key="frame" x="50" y="0.0" width="314" height="100"/>
+                                    <rect key="frame" x="50" y="0.0" width="314" height="150"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kna-Ql-e5a">
-                                            <rect key="frame" x="66.666666666666686" y="15" width="181" height="70"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Whv-G1-Aac">
+                                            <rect key="frame" x="25" y="5" width="264" height="140"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-VT-Xzo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="70"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
-                                                    <nil key="textColor"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIR-yF-ccS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="20"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Y2z-ey-Bc5"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00-00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEL-kZ-K9n">
+                                                    <rect key="frame" x="0.0" y="20" width="264" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="CIX-dr-Gud"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tS-s2-d7x">
-                                                    <rect key="frame" x="72.333333333333329" y="0.0" width="36.333333333333329" height="70"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-pk-7Qq">
-                                                    <rect key="frame" x="108.66666666666669" y="0.0" width="72.333333333333314" height="70"/>
-                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnV-Dk-ieI">
+                                                    <rect key="frame" x="0.0" y="60" width="264" height="80"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kna-Ql-e5a">
+                                                            <rect key="frame" x="41.666666666666686" y="0.0" width="181" height="80"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooF-VT-Xzo">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="70"/>
+                                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tS-s2-d7x">
+                                                                    <rect key="frame" x="72.333333333333329" y="0.0" width="36.333333333333329" height="70"/>
+                                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-pk-7Qq">
+                                                                    <rect key="frame" x="108.66666666666669" y="0.0" width="72.333333333333314" height="70"/>
+                                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="60"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="Ijy-Ab-IPY"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="PpS-wI-nHQ"/>
+                                                        <constraint firstItem="kna-Ql-e5a" firstAttribute="centerY" secondItem="WnV-Dk-ieI" secondAttribute="centerY" id="TgW-hs-8zo"/>
+                                                        <constraint firstItem="kna-Ql-e5a" firstAttribute="centerX" secondItem="WnV-Dk-ieI" secondAttribute="centerX" id="lkP-1D-oLF"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WnV-Dk-ieI" firstAttribute="leading" secondItem="Whv-G1-Aac" secondAttribute="leading" id="0ha-up-FFG"/>
+                                                <constraint firstAttribute="trailing" secondItem="WnV-Dk-ieI" secondAttribute="trailing" id="FB4-FR-ks7"/>
+                                                <constraint firstItem="HIR-yF-ccS" firstAttribute="leading" secondItem="Whv-G1-Aac" secondAttribute="leading" id="L7u-qn-e4l"/>
+                                                <constraint firstAttribute="trailing" secondItem="HIR-yF-ccS" secondAttribute="trailing" id="jUy-TT-i78"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="kna-Ql-e5a" firstAttribute="centerX" secondItem="gHW-da-0T2" secondAttribute="centerX" id="NVa-Tx-BrT"/>
-                                        <constraint firstItem="kna-Ql-e5a" firstAttribute="centerY" secondItem="gHW-da-0T2" secondAttribute="centerY" id="dKF-Ko-ur7"/>
+                                        <constraint firstItem="Whv-G1-Aac" firstAttribute="leading" secondItem="gHW-da-0T2" secondAttribute="leading" constant="25" id="ajt-nB-hTD"/>
+                                        <constraint firstItem="Whv-G1-Aac" firstAttribute="centerY" secondItem="gHW-da-0T2" secondAttribute="centerY" id="rbn-SJ-v5r"/>
+                                        <constraint firstItem="Whv-G1-Aac" firstAttribute="centerX" secondItem="gHW-da-0T2" secondAttribute="centerX" id="w0N-sl-fZx"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X37-G4-AUL" userLabel="space">
-                                    <rect key="frame" x="364" y="0.0" width="50" height="100"/>
+                                    <rect key="frame" x="364" y="0.0" width="50" height="150"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="9vu-Bq-h5S"/>
                                     </constraints>
                                 </view>
                             </subviews>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="KnD-FT-2Rv"/>
-                            </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McC-bp-5Td">
-                            <rect key="frame" x="0.0" y="130" width="414" height="200"/>
+                            <rect key="frame" x="0.0" y="180" width="414" height="200"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ut-fq-2IS" userLabel="space">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="200"/>
@@ -116,31 +154,21 @@
                                                     <rect key="frame" x="30" y="0.0" width="254" height="160"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="QOr-W4-GvF">
-                                                            <rect key="frame" x="0.0" y="12.333333333333314" width="254" height="135.66666666666666"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333321" width="254" height="79.666666666666686"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHw-KZ-KHj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="35"/>
-                                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMy-2G-akN">
-                                                                    <rect key="frame" x="0.0" y="56.000000000000007" width="254" height="29.333333333333336"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="29.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkG-4f-ILK">
-                                                                    <rect key="frame" x="0.0" y="106.33333333333337" width="254" height="29.333333333333343"/>
+                                                                    <rect key="frame" x="0.0" y="50.333333333333378" width="254" height="29.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="XHw-KZ-KHj" secondAttribute="trailing" id="936-pQ-4cD"/>
-                                                                <constraint firstItem="XHw-KZ-KHj" firstAttribute="leading" secondItem="QOr-W4-GvF" secondAttribute="leading" id="qxi-KX-Usc"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,7 +211,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txV-nO-cCD">
-                            <rect key="frame" x="0.0" y="360" width="414" height="200"/>
+                            <rect key="frame" x="0.0" y="410" width="414" height="200"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-db-3Us" userLabel="space">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="200"/>
@@ -209,31 +237,21 @@
                                                     <rect key="frame" x="30" y="0.0" width="254" height="160"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="qHk-bR-t03">
-                                                            <rect key="frame" x="0.0" y="12.333333333333371" width="254" height="135.66666666666666"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333378" width="254" height="79.666666666666686"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7R-bm-sDw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="35"/>
-                                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r59-W9-wa0">
-                                                                    <rect key="frame" x="0.0" y="56.000000000000007" width="254" height="29.333333333333336"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="29.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oED-wl-AuM">
-                                                                    <rect key="frame" x="0.0" y="106.33333333333326" width="254" height="29.333333333333343"/>
+                                                                    <rect key="frame" x="0.0" y="50.333333333333265" width="254" height="29.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="T7R-bm-sDw" secondAttribute="trailing" id="0nh-t2-quo"/>
-                                                                <constraint firstItem="T7R-bm-sDw" firstAttribute="leading" secondItem="qHk-bR-t03" secondAttribute="leading" id="gRB-bH-0Hb"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,6 +301,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="k1A-Yh-Bhd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="99" id="537-Jn-gUh"/>
                 <constraint firstItem="k1A-Yh-Bhd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6MR-96-ZIC"/>
                 <constraint firstItem="k1A-Yh-Bhd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fvs-rK-OtP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k1A-Yh-Bhd" secondAttribute="trailing" id="ogE-vh-tdO"/>
