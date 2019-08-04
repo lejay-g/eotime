@@ -17,6 +17,10 @@
 		C13D054922F5160300CE5E09 /* etimeFunc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C13D054122F5160300CE5E09 /* etimeFunc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C13D054E22F5164500CE5E09 /* etime_func.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D053A22F4FE4E00CE5E09 /* etime_func.swift */; };
 		C13D054F22F517AF00CE5E09 /* etimeFunc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13D054122F5160300CE5E09 /* etimeFunc.framework */; };
+		C13D055222F5450000CE5E09 /* WorklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D055022F5450000CE5E09 /* WorklistViewController.swift */; };
+		C13D055322F5450000CE5E09 /* WorklistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D055122F5450000CE5E09 /* WorklistViewController.xib */; };
+		C13D055622F578F700CE5E09 /* WorklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D055422F578F700CE5E09 /* WorklistTableViewCell.swift */; };
+		C13D055722F578F700CE5E09 /* WorklistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D055522F578F700CE5E09 /* WorklistTableViewCell.xib */; };
 		C1B3D24222F39BFD0077D0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */; };
 		C1B3D24422F39BFD0077D0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24322F39BFD0077D0B1 /* ViewController.swift */; };
 		C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D24522F39BFD0077D0B1 /* Main.storyboard */; };
@@ -80,6 +84,10 @@
 		C13D054122F5160300CE5E09 /* etimeFunc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = etimeFunc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13D054322F5160300CE5E09 /* etimeFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = etimeFunc.h; sourceTree = "<group>"; };
 		C13D054422F5160300CE5E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13D055022F5450000CE5E09 /* WorklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorklistViewController.swift; sourceTree = "<group>"; };
+		C13D055122F5450000CE5E09 /* WorklistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorklistViewController.xib; sourceTree = "<group>"; };
+		C13D055422F578F700CE5E09 /* WorklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorklistTableViewCell.swift; sourceTree = "<group>"; };
+		C13D055522F578F700CE5E09 /* WorklistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorklistTableViewCell.xib; sourceTree = "<group>"; };
 		C1B3D23E22F39BFD0077D0B1 /* eotime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eotime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B3D24322F39BFD0077D0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 		C1B3D24022F39BFD0077D0B1 /* eotime */ = {
 			isa = PBXGroup;
 			children = (
+				C13D053622F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png */,
 				C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */,
 				C1B3D24322F39BFD0077D0B1 /* ViewController.swift */,
 				C1B3D24522F39BFD0077D0B1 /* Main.storyboard */,
@@ -181,7 +190,10 @@
 				C1B3D24822F39BFD0077D0B1 /* eotime.xcdatamodeld */,
 				C1B3D25622F3A4830077D0B1 /* MainViewController.swift */,
 				C1B3D25722F3A4830077D0B1 /* MainViewController.xib */,
-				C13D053622F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png */,
+				C13D055022F5450000CE5E09 /* WorklistViewController.swift */,
+				C13D055122F5450000CE5E09 /* WorklistViewController.xib */,
+				C13D055422F578F700CE5E09 /* WorklistTableViewCell.swift */,
+				C13D055522F578F700CE5E09 /* WorklistTableViewCell.xib */,
 			);
 			path = eotime;
 			sourceTree = "<group>";
@@ -317,11 +329,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13D055722F578F700CE5E09 /* WorklistTableViewCell.xib in Resources */,
 				C1B3D24F22F39BFF0077D0B1 /* LaunchScreen.storyboard in Resources */,
 				C1B3D24C22F39BFF0077D0B1 /* Assets.xcassets in Resources */,
 				C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */,
 				C13D053722F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png in Resources */,
 				C1B3D25922F3A4830077D0B1 /* MainViewController.xib in Resources */,
+				C13D055322F5450000CE5E09 /* WorklistViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,9 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13D055222F5450000CE5E09 /* WorklistViewController.swift in Sources */,
 				C1B3D24422F39BFD0077D0B1 /* ViewController.swift in Sources */,
 				C1B3D24A22F39BFD0077D0B1 /* eotime.xcdatamodeld in Sources */,
 				C1B3D24222F39BFD0077D0B1 /* AppDelegate.swift in Sources */,
+				C13D055622F578F700CE5E09 /* WorklistTableViewCell.swift in Sources */,
 				C1B3D25822F3A4830077D0B1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

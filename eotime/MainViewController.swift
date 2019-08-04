@@ -62,7 +62,8 @@ class MainViewController: UIViewController {
         let disp_time = etime(utime: unixtime)
         time_hour.text = disp_time.get_hour()
         time_minute.text = disp_time.get_minute()
-        switch Int(disp_time.get_hour())! {
+        let hour = Int(disp_time.get_hour())!
+        switch hour {
         case 0...3:
             time_limit.text = "00:00-03:59"
         case 4...7:
@@ -79,8 +80,8 @@ class MainViewController: UIViewController {
             time_limit.text = "--"
         }
 
-        get_MiningItem(hour: Int(disp_time.get_hour())!)
-        get_LoggingItem(hour: Int(disp_time.get_hour())!)
+        get_MiningItem(hour: hour)
+        get_LoggingItem(hour: hour)
     }
 
     
@@ -220,6 +221,19 @@ class MainViewController: UIViewController {
             self.Logging.layer.borderColor = UIColor.clear.cgColor
             self.mining.layer.borderColor = UIColor.clear.cgColor
         }
+    }
+    
+    @IBAction func tap_mining(_ sender: Any) {
+        let v = WorklistViewController()
+        v.modalPresentationStyle = .custom
+        v.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
+        present(v, animated: true, completion: nil)
+    }
+    
+    @IBAction func tap_logging(_ sender: Any) {
+        let v = WorklistViewController()
+        v.modalPresentationStyle = .custom
+        v.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
     }
     
     /*
