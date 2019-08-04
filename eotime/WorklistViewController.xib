@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorklistViewController" customModule="eotime" customModuleProvider="target">
             <connections>
+                <outlet property="baseView" destination="Awo-QD-6jB" id="759-v5-gaA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="worktbl" destination="zYs-Gq-Qjc" id="jOz-he-AMB"/>
             </connections>

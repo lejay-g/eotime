@@ -13,6 +13,8 @@ class WorklistTableViewCell: UITableViewCell {
     @IBOutlet weak var area: UILabel!
     @IBOutlet weak var item: UILabel!
     @IBOutlet weak var element: UIView!
+    @IBOutlet weak var mark: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

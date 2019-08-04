@@ -92,6 +92,7 @@
                 <outlet property="area" destination="ZCf-ba-8Bs" id="BYo-CN-UV2"/>
                 <outlet property="element" destination="cMQ-qS-HfB" id="C4t-R2-NMG"/>
                 <outlet property="item" destination="rWb-ya-WMp" id="laX-cr-02C"/>
+                <outlet property="mark" destination="e1S-UJ-f7m" id="RXx-Tz-Kf4"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="169.08482142857142"/>
         </tableViewCell>

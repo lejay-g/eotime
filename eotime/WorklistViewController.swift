@@ -7,102 +7,16 @@
 //
 
 import UIKit
-
-let mining_data = """
-[
-    {
-        "hour":0,
-        "area":"ギラバニア湖畔地帯(x13,y16)",
-        "name":"アルマンディン",
-        "element":"炎"
-    },
-    {
-        "hour":4,
-        "area":"高地ドラヴァニア(x17,y27)",
-        "name":"レイディアントファイアグラベル",
-        "element":"炎"
-    },
-    {
-        "hour":8,
-        "area":"低地ドラヴァニア(x26,y24)",
-        "name":"レイディアントファイアグラベル",
-        "element":"炎"
-    },
-    {
-        "hour":12,
-        "area":"アジムステップ(x29,y15)",
-        "name":"ショール",
-        "element":"雷"
-    },
-    {
-        "hour":16,
-        "area":"アバラシア雲海(x34,y30)",
-        "name":"レイディアントライトニンググラベル",
-        "element":"雷"
-    },
-    {
-        "hour":20,
-        "area":"クルザス西部高地(x21,y28)",
-        "name":"レイディアントライトニンググラベル",
-        "element":"雷"
-    }
-]
-""".data(using: .utf8)!
-
-let logging_data = """
-[
-    {
-        "hour":0,
-        "area":"クルザス西部高地(x10,y14)",
-        "name":"クラリーセージ",
-        "element":"風"
-    },
-    {
-        "hour":4,
-        "area":"ギラバニア湖畔地帯(x28,y10)",
-        "name":"トレヤの枝",
-        "element":"氷"
-    },
-    {
-        "hour":8,
-        "area":"高地ドラヴァニア(x10,y32)",
-        "name":"メネフィナローレル",
-        "element":"氷"
-    },
-    {
-        "hour":12,
-        "area":"休め",
-        "name":"休め",
-        "element":"なし"
-    },
-    {
-        "hour":16,
-        "area":"高地ドラヴァニア(x10,y32)",
-        "name":"メネフィナローレル",
-        "element":"氷"
-    },
-    {
-        "hour":20,
-        "area":"アバラシア雲海(x23,y12)",
-        "name":"クラリーセージ",
-        "element":"風"
-    }
-]
-""".data(using: .utf8)!
-
-
-struct getItem: Codable {
-    var hour: Int
-    var area: String
-    var name: String
-    var element: String
-}
+import etimeFunc
 
 class WorklistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var para_work: String = ""
+    var para_hour: Int = 0
+    
     @IBOutlet weak var worktbl: UITableView!
-
-    var items: [getItem]?
-
+    @IBOutlet weak var baseView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -114,23 +28,81 @@ class WorklistViewController: UIViewController, UITableViewDelegate, UITableView
         
         worktbl.tableFooterView = UIView() //空白行の線を消す
         
-        //JSONデータをパース
-        items = try? JSONDecoder().decode([getItem].self, from: mining_data)
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
+        if para_work == "採掘" {
+            baseView.backgroundColor = UIColor(red: 148/255,
+                                               green: 132/255,
+                                               blue: 104/255,
+                                               alpha: 1)
+        }else if para_work == "園芸" {
+            baseView.backgroundColor = UIColor(red: 145/255,
+                                               green: 203/255,
+                                               blue: 114/255,
+                                               alpha: 1)
+        }else{
+            baseView.backgroundColor = UIColor.white
+        }
         
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 6 //max6行
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = worktbl.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! WorklistTableViewCell
-
-        cell.area.text = items![indexPath.row].area
-        cell.item.text = items![indexPath.row].name
         
+        var itemdata: getItem = getItem(work: para_work, hour: 0) //初期化
+        
+        
+        switch para_hour{
+        case 0:
+            if indexPath.row == 5 {
+                itemdata = getItem(work: para_work, hour: 0)
+            }else{
+                itemdata = getItem(work: para_work, hour: indexPath.row + 1)
+            }
+        case 1:
+            if indexPath.row < 4 {
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row + 2))
+            }else{
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row - 4))
+            }
+        case 2:
+            if indexPath.row < 3 {
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row + 3))
+            }else{
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row - 3))
+            }
+        case 3:
+            if indexPath.row < 2 {
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row + 4))
+            }else{
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row - 2))
+            }
+        case 4:
+            if indexPath.row < 1 {
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row + 5))
+            }else{
+                itemdata = getItem(work: para_work,
+                                   hour: (indexPath.row - 1))
+            }
+        case 5:
+            itemdata = getItem(work: para_work, hour: indexPath.row)
+        default:
+            itemdata = getItem(work: para_work, hour: indexPath.row)
+        }
+        
+        cell.area.text = itemdata.get_area()
+        cell.item.text = itemdata.get_item()
+        cell.element.backgroundColor = getColor(elementName: itemdata.get_element()).crystalColor()
+
         return cell
     }
 

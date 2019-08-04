@@ -194,11 +194,11 @@
                                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="tap_mining:" destination="-1" eventType="touchUpInside" id="e4m-bo-RAZ"/>
+                                                <action selector="tap_mining:" destination="-1" eventType="touchUpInside" id="uc3-T7-V52"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.58211958408355713" green="0.51907163858413696" blue="0.40967866778373718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.58039215686274503" green="0.51764705882352935" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="ODJ-lW-f8G" firstAttribute="height" secondItem="MNm-oK-po8" secondAttribute="height" id="54Q-9D-5PS"/>
                                         <constraint firstItem="s1a-4C-4TD" firstAttribute="centerY" secondItem="MNm-oK-po8" secondAttribute="centerY" id="7S8-a7-GUD"/>
@@ -297,12 +297,11 @@
                                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="tap_logging:" destination="-1" eventType="touchUpInside" id="fJd-yf-O6g"/>
-                                                <action selector="tap_mining:" destination="-1" eventType="touchUpInside" id="XaJ-fg-trj"/>
+                                                <action selector="tap_logging:" destination="-1" eventType="touchUpInside" id="tYO-uJ-DC5"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.57032740116119385" green="0.79745131731033325" blue="0.44644874334335327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.56862745098039214" green="0.79607843137254897" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="XyK-up-jky" firstAttribute="top" secondItem="1NN-Z3-1md" secondAttribute="top" constant="20" symbolic="YES" id="8eZ-S5-pDo"/>
                                         <constraint firstItem="XyK-up-jky" firstAttribute="leading" secondItem="1NN-Z3-1md" secondAttribute="leading" id="J8L-sW-zDo"/>

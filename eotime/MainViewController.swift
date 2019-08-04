@@ -27,6 +27,9 @@ class MainViewController: UIViewController {
     
     //時計
     private var timer = Timer()
+    
+    //時間帯マーク
+    var mark_hour:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,169 +65,64 @@ class MainViewController: UIViewController {
         let disp_time = etime(utime: unixtime)
         time_hour.text = disp_time.get_hour()
         time_minute.text = disp_time.get_minute()
+        
         let hour = Int(disp_time.get_hour())!
         switch hour {
         case 0...3:
             time_limit.text = "00:00-03:59"
+            mark_hour = 0
         case 4...7:
             time_limit.text = "04:00-07:59"
+            mark_hour = 1
         case 8...11:
             time_limit.text = "08:00-11:59"
+            mark_hour = 2
         case 12...15:
             time_limit.text = "12:00-15:59"
+            mark_hour = 3
         case 16...19:
             time_limit.text = "16:00-19:59"
+            mark_hour = 4
         case 20...24:
             time_limit.text = "20:00-24:59"
+            mark_hour = 5
         default :
             time_limit.text = "--"
         }
 
-        get_MiningItem(hour: hour)
-        get_LoggingItem(hour: hour)
+        get_MiningItem(hour: mark_hour)
+        get_LoggingItem(hour: mark_hour)
     }
 
     
     //採掘アイテム
     func get_MiningItem(hour: Int) {
-        var ItemName: String = ""
-        var AreaName: String = ""
-        var Element: String = ""
+        let itemdata = getItem(work: "採掘", hour: hour)
         
-        switch hour {
-        case 0...3:
-            AreaName = "ギラバニア湖畔地帯(x13,y16)"
-            ItemName = "アルマンディン"
-            Element = "炎"
-
-        case 4...7:
-            AreaName = "高地ドラヴァニア(x17,y27)"
-            ItemName = "レイディアントファイアグラベル"
-            Element = "炎"
-        case 8...11:
-            AreaName = "低地ドラヴァニア(x26,y24)"
-            ItemName = "レイディアントファイアグラベル"
-            Element = "炎"
-        case 12...15:
-            AreaName = "アジムステップ(x29,y15)"
-            ItemName = "ショール"
-            Element = "雷"
-        case 16...19:
-            AreaName = "アバラシア雲海(x34,y30)"
-            ItemName = "レイディアントライトニンググラベル"
-            Element = "雷"
-        case 20...24:
-            AreaName = "クルザス西部高地(x21,y28)"
-            ItemName = "レイディアントライトニンググラベル"
-            Element = "雷"
-        default:
-            AreaName = "--"
-            ItemName = "--"
-        }
-        
-        mining_area.text = AreaName
-        mining_item.text = ItemName
-        
+        mining_area.text = itemdata.get_area()
+        mining_item.text = itemdata.get_item()
         //枠線にクリスタルの色をつける
-        crystalColor(work: "mining", color: Element)
+        let color = getColor(elementName: itemdata.get_element())
+        self.mining.layer.borderColor = color.crystalColor().cgColor
 
     }
-    
     
     //伐採アイテム
     func get_LoggingItem(hour: Int){
-        var ItemName: String = ""
-        var AreaName: String = ""
-        var Element: String = ""
-        switch hour {
-        case 0...3:
-            AreaName = "クルザス西部高地(x10,y14)"
-            ItemName = "クラリーセージ"
-            Element = "風"
-        case 4...7:
-            AreaName = "ギラバニア湖畔地帯(x28,y10)"
-            ItemName = "トレヤの枝"
-            Element = "氷"
-        case 8...11:
-            AreaName = "高地ドラヴァニア(x10,y32)"
-            ItemName = "メネフィナローレル"
-            Element = "氷"
-        case 12...15:
-            AreaName = "休め"
-            ItemName = "休め"
-        case 16...19:
-            AreaName = "高地ドラヴァニア(x10,y32)"
-            ItemName = "メネフィナローレル"
-            Element = "氷"
-        case 20...24:
-            AreaName = "アバラシア雲海(x23,y12)"
-            ItemName = "クラリーセージ"
-            Element = "風"
-        default:
-            AreaName = "--"
-            ItemName = "--"
-        }
-
-        logging_area.text = AreaName
-        logging_item.text = ItemName
-
+        let itemdata = getItem(work: "園芸", hour: hour)
+        
+        logging_area.text = itemdata.get_area()
+        logging_item.text = itemdata.get_item()
         //枠線にクリスタルの色をつける
-        crystalColor(work: "logging", color: Element)
+        let color = getColor(elementName: itemdata.get_element())
+        self.Logging.layer.borderColor = color.crystalColor().cgColor
     }
-    
-    //枠線にcrystalの色を反映
-    func crystalColor(work: String, color: String) {
-        
-        var crystal: CGColor
-        switch color {
-        case "炎":
-            //#c97586
-            crystal = UIColor.red.cgColor
-            crystal = UIColor(red: 201/255,
-                              green: 117/255,
-                              blue: 134/255,
-                              alpha: 1).cgColor
-        case "氷":
-            //#eaedf7
-            crystal = UIColor(red: 234/255,
-                              green: 237/255,
-                              blue: 247/255,
-                              alpha: 1).cgColor
-        case "風":
-            //#d6e9ca
-            crystal = UIColor(red: 216/255,
-                              green: 233/255,
-                              blue: 202/255,
-                              alpha: 1).cgColor
-        case "雷":
-            //#a59aca
-            crystal = UIColor(red: 165/255,
-                              green: 154/255,
-                              blue: 202/255,
-                              alpha: 1).cgColor
-        case "土":
-            //#f2c9ac
-            crystal = UIColor(red: 242/255,
-                              green: 201/255,
-                              blue: 172/255,
-                              alpha: 1).cgColor
-        default:
-            crystal = UIColor.lightGray.cgColor
-        }
-        
-        switch work {
-        case "logging":
-            self.Logging.layer.borderColor = crystal
-        case "mining":
-            self.mining.layer.borderColor = crystal
-        default:
-            self.Logging.layer.borderColor = UIColor.clear.cgColor
-            self.mining.layer.borderColor = UIColor.clear.cgColor
-        }
-    }
+
     
     @IBAction func tap_mining(_ sender: Any) {
         let v = WorklistViewController()
+        v.para_work = "採掘"
+        v.para_hour = mark_hour
         v.modalPresentationStyle = .custom
         v.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         present(v, animated: true, completion: nil)
@@ -232,8 +130,11 @@ class MainViewController: UIViewController {
     
     @IBAction func tap_logging(_ sender: Any) {
         let v = WorklistViewController()
+        v.para_work = "園芸"
+        v.para_hour = mark_hour
         v.modalPresentationStyle = .custom
         v.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
+        present(v, animated: true, completion: nil)
     }
     
     /*
