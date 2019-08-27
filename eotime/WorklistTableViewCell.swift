@@ -15,6 +15,9 @@ class WorklistTableViewCell: UITableViewCell {
     @IBOutlet weak var element: UIView!
     @IBOutlet weak var mark: UILabel!
     
+    var xx: Int = 0
+    var yy: Int = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

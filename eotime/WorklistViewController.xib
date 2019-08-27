@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorklistViewController" customModule="eotime" customModuleProvider="target">
             <connections>
                 <outlet property="baseView" destination="Awo-QD-6jB" id="759-v5-gaA"/>
+                <outlet property="mapView" destination="Vt6-E5-Gwk" id="RnT-St-jbv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="worktbl" destination="zYs-Gq-Qjc" id="jOz-he-AMB"/>
             </connections>
@@ -25,15 +26,19 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-Jm-ajy">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="btn_close:" destination="-1" eventType="touchUpInside" id="LfO-Y2-NBO"/>
-                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-QD-6jB">
-                    <rect key="frame" x="0.0" y="304" width="414" height="592"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zYs-Gq-Qjc">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ギラバニア湖畔地帯.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-E5-Gwk">
+                    <rect key="frame" x="82" y="49" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="5yU-gx-wLk"/>
+                        <constraint firstAttribute="height" constant="250" id="mUR-ZU-Abc"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zYs-Gq-Qjc">
                     <rect key="frame" x="10" y="324" width="394" height="528"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,12 +47,14 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="zYs-Gq-Qjc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="2GR-rt-h8w"/>
+                <constraint firstItem="Vt6-E5-Gwk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="Dsb-Mv-dwE"/>
                 <constraint firstItem="zYs-Gq-Qjc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="280" id="HK6-XZ-ELf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zYs-Gq-Qjc" secondAttribute="trailing" constant="10" id="HTd-zJ-CIc"/>
                 <constraint firstItem="z8W-Jm-ajy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ShV-lk-SOb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zYs-Gq-Qjc" secondAttribute="bottom" constant="10" id="XHd-aw-O9s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Awo-QD-6jB" secondAttribute="trailing" id="ZZE-Og-t5t"/>
-                <constraint firstItem="Awo-QD-6jB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="260" id="frh-3n-bQ8"/>
+                <constraint firstItem="Awo-QD-6jB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fNE-gF-c9a"/>
+                <constraint firstItem="Vt6-E5-Gwk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kzF-ym-GdB"/>
                 <constraint firstItem="z8W-Jm-ajy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sAK-n3-jn7"/>
                 <constraint firstAttribute="bottom" secondItem="Awo-QD-6jB" secondAttribute="bottom" id="sRJ-Ud-2P1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="z8W-Jm-ajy" secondAttribute="bottom" id="uaN-ej-BNV"/>
@@ -58,4 +65,7 @@
             <point key="canvasLocation" x="34.782608695652179" y="39.508928571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="ギラバニア湖畔地帯.png" width="250" height="250"/>
+    </resources>
 </document>

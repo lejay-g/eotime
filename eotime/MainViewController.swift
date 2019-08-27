@@ -24,7 +24,13 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var logging_area: UILabel!
     @IBOutlet weak var logging_item: UILabel!
-    
+
+    //xy座標
+    var mining_area_x: Int = 0
+    var mining_area_y: Int = 0
+    var logging_area_x: Int = 0
+    var logging_area_y: Int = 0
+
     //時計
     private var timer = Timer()
     
@@ -101,6 +107,8 @@ class MainViewController: UIViewController {
         
         mining_area.text = itemdata.get_area()
         mining_item.text = itemdata.get_item()
+        mining_area_x = itemdata.get_x()
+        mining_area_y = itemdata.get_y()
         //枠線にクリスタルの色をつける
         let color = getColor(elementName: itemdata.get_element())
         self.mining.layer.borderColor = color.crystalColor().cgColor
@@ -113,6 +121,8 @@ class MainViewController: UIViewController {
         
         logging_area.text = itemdata.get_area()
         logging_item.text = itemdata.get_item()
+        logging_area_x = itemdata.get_x()
+        logging_area_y = itemdata.get_y()
         //枠線にクリスタルの色をつける
         let color = getColor(elementName: itemdata.get_element())
         self.Logging.layer.borderColor = color.crystalColor().cgColor
@@ -123,6 +133,9 @@ class MainViewController: UIViewController {
         let v = WorklistViewController()
         v.para_work = "採掘"
         v.para_hour = mark_hour
+        v.para_x = mining_area_x
+        v.para_y = mining_area_y
+        v.mapname = mining_area.text!
         v.modalPresentationStyle = .custom
         v.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         present(v, animated: true, completion: nil)
@@ -132,6 +145,9 @@ class MainViewController: UIViewController {
         let v = WorklistViewController()
         v.para_work = "園芸"
         v.para_hour = mark_hour
+        v.para_x = logging_area_x
+        v.para_y = logging_area_y
+        v.mapname = logging_area.text!
         v.modalPresentationStyle = .custom
         v.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         present(v, animated: true, completion: nil)

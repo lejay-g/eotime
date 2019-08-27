@@ -12,37 +12,49 @@ public let mining_data = """
 [
     {
         "hour":0,
-        "area":"ギラバニア湖畔地帯(x13,y16)",
+        "area":"ギラバニア湖畔地帯",
+        "x":13,
+        "y":16,
         "name":"アルマンディン",
         "element":"炎"
     },
     {
         "hour":4,
-        "area":"高地ドラヴァニア(x17,y27)",
+        "area":"高地ドラヴァニア",
+        "x":17,
+        "y":27,
         "name":"レイディアントファイアグラベル",
         "element":"炎"
     },
     {
         "hour":8,
-        "area":"低地ドラヴァニア(x26,y24)",
+        "area":"低地ドラヴァニア",
+        "x":26,
+        "y":24,
         "name":"レイディアントファイアグラベル",
         "element":"炎"
     },
     {
         "hour":12,
-        "area":"アジムステップ(x29,y15)",
+        "area":"アジムステップ",
+        "x":29,
+        "y":15,
         "name":"ショール",
         "element":"雷"
     },
     {
         "hour":16,
-        "area":"アバラシア雲海(x34,y30)",
+        "area":"アバラシア雲海",
+        "x":34,
+        "y":30,
         "name":"レイディアントライトニンググラベル",
         "element":"雷"
     },
     {
         "hour":20,
-        "area":"クルザス西部高地(x21,y28)",
+        "area":"クルザス西部高地",
+        "x":21,
+        "y":28,
         "name":"レイディアントライトニンググラベル",
         "element":"雷"
     }
@@ -53,37 +65,49 @@ public let logging_data = """
 [
     {
         "hour":0,
-        "area":"クルザス西部高地(x10,y14)",
+        "area":"クルザス西部高地",
+        "x":10,
+        "y":14,
         "name":"クラリーセージ",
         "element":"風"
     },
     {
         "hour":4,
-        "area":"ギラバニア湖畔地帯(x28,y10)",
+        "area":"ギラバニア湖畔地帯",
+        "x":28,
+        "y":10,
         "name":"トレヤの枝",
         "element":"氷"
     },
     {
         "hour":8,
-        "area":"高地ドラヴァニア(x10,y32)",
+        "area":"高地ドラヴァニア",
+        "x":10,
+        "y":32,
         "name":"メネフィナローレル",
         "element":"氷"
     },
     {
         "hour":12,
         "area":"休め",
+        "x":0,
+        "y":0,
         "name":"休め",
         "element":"なし"
     },
     {
         "hour":16,
-        "area":"高地ドラヴァニア(x10,y32)",
+        "area":"高地ドラヴァニア",
+        "x":10,
+        "y":32,
         "name":"メネフィナローレル",
         "element":"氷"
     },
     {
         "hour":20,
-        "area":"アバラシア雲海(x23,y12)",
+        "area":"アバラシア雲海",
+        "x":23,
+        "y":12,
         "name":"クラリーセージ",
         "element":"風"
     }
@@ -94,6 +118,8 @@ public let logging_data = """
 struct workItem: Codable {
     var hour: Int
     var area: String
+    var x: Int
+    var y: Int
     var name: String
     var element: String
 }
@@ -103,6 +129,7 @@ public class getItem {
     var work: String
     var hour: Int
     
+    //パラメータ設定
     public init(work: String, hour: Int){
         self.work = work
         self.hour = hour
@@ -135,7 +162,35 @@ public class getItem {
         
         return items![hour].area
     }
-    
+
+    //x座標
+    public func get_x() -> Int{
+        var items: [workItem]?
+        if work == "採掘" {
+            items = try? JSONDecoder().decode([workItem].self, from: mining_data)
+        }else{
+            items = try? JSONDecoder().decode([workItem].self, from: logging_data)
+        }
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        return items![hour].x
+    }
+
+    //y座標
+    public func get_y() -> Int{
+        var items: [workItem]?
+        if work == "採掘" {
+            items = try? JSONDecoder().decode([workItem].self, from: mining_data)
+        }else{
+            items = try? JSONDecoder().decode([workItem].self, from: logging_data)
+        }
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        return items![hour].y
+    }
+
     //属性名
     public func get_element() -> String{
         var items: [workItem]?

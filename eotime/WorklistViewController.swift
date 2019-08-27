@@ -14,9 +14,16 @@ class WorklistViewController: UIViewController, UITableViewDelegate, UITableView
     var para_work: String = ""
     var para_hour: Int = 0
     
+    var para_x: Int = 0
+    var para_y: Int = 0
+    var mapname: String = ""
+    
     @IBOutlet weak var worktbl: UITableView!
     @IBOutlet weak var baseView: UIView!
+    @IBOutlet weak var mapView: UIImageView!
     
+    var pointview :UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +32,6 @@ class WorklistViewController: UIViewController, UITableViewDelegate, UITableView
         worktbl.dataSource = self
         worktbl.register(nib, forCellReuseIdentifier: "Cell")
         worktbl.estimatedRowHeight = 20
-        
         worktbl.tableFooterView = UIView() //空白行の線を消す
         
         if para_work == "採掘" {
@@ -42,6 +48,23 @@ class WorklistViewController: UIViewController, UITableViewDelegate, UITableView
             baseView.backgroundColor = UIColor.white
         }
         
+        //マップの座標に印をつける
+        //とりあえず□を作る
+        pointview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        pointview.backgroundColor = UIColor.green
+        
+        mapView.image = UIImage(named: mapname)
+        //エオルゼアのマップはmax42x42、アプリ用画像は250なので
+        let xx = (Float(para_x) / 42.0) * 250.0
+        let yy = (Float(para_y) / 42.0) * 250.0
+        pointview.center = CGPoint(x: CGFloat(xx), y: CGFloat(yy))
+        mapView.addSubview(pointview)
+        
+        //下にスワイプしたときのジェスチャー登録(スワイプで閉じる)
+        let downSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.btn_close))
+        downSwipeGesture.direction = .down
+        view.addGestureRecognizer(downSwipeGesture) //画面にジェスチャーを登録
+
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,12 +124,38 @@ class WorklistViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.area.text = itemdata.get_area()
         cell.item.text = itemdata.get_item()
+        cell.xx = itemdata.get_x()
+        cell.yy = itemdata.get_y()
         cell.element.backgroundColor = getColor(elementName: itemdata.get_element()).crystalColor()
 
         return cell
     }
 
-    @IBAction func btn_close(_ sender: Any) {
+    //セルタップ時
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let celll = worktbl.cellForRow(at: indexPath) as! WorklistTableViewCell
+        pointRemove()
+        //とりあえず□を作る
+        pointview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        pointview.backgroundColor = UIColor.green
+        
+        //エオルゼアのマップはmax42x42、アプリ用画像は250なので
+        let xx = (Float(celll.xx) / 42.0) * 250.0
+        let yy = (Float(celll.yy) / 42.0) * 250.0
+        pointview.center = CGPoint(x: CGFloat(xx), y: CGFloat(yy))
+        mapView.image = UIImage(named: celll.area.text!)
+        mapView.addSubview(pointview)
+
+    }
+    
+    //採取ポイントの削除
+    func pointRemove(){
+        for v in mapView.subviews {
+            v.removeFromSuperview()
+        }
+    }
+
+    @objc func btn_close() {
         
         dismiss(animated: true, completion: nil)
     }

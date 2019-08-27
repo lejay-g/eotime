@@ -21,6 +21,33 @@
 		C13D055322F5450000CE5E09 /* WorklistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D055122F5450000CE5E09 /* WorklistViewController.xib */; };
 		C13D055622F578F700CE5E09 /* WorklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D055422F578F700CE5E09 /* WorklistTableViewCell.swift */; };
 		C13D055722F578F700CE5E09 /* WorklistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D055522F578F700CE5E09 /* WorklistTableViewCell.xib */; };
+		C1986F612314FA350035317E /* アジムステップ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F462314FA320035317E /* アジムステップ@2x.png */; };
+		C1986F622314FA350035317E /* ドラヴァニア雲海@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F472314FA320035317E /* ドラヴァニア雲海@3x.png */; };
+		C1986F632314FA350035317E /* 低地ドラヴァニア@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F482314FA330035317E /* 低地ドラヴァニア@3x.png */; };
+		C1986F642314FA350035317E /* 高地ドラヴァニア@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F492314FA330035317E /* 高地ドラヴァニア@3x.png */; };
+		C1986F652314FA350035317E /* 低地ドラヴァニア@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F4A2314FA330035317E /* 低地ドラヴァニア@1x.png */; };
+		C1986F662314FA350035317E /* ドラヴァニア雲海@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F4B2314FA330035317E /* ドラヴァニア雲海@1x.png */; };
+		C1986F672314FA350035317E /* 高地ドラヴァニア@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F4C2314FA330035317E /* 高地ドラヴァニア@2x.png */; };
+		C1986F682314FA350035317E /* ギラバニア山岳地帯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F4D2314FA330035317E /* ギラバニア山岳地帯@2x.png */; };
+		C1986F692314FA350035317E /* アバラシア雲海@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F4E2314FA330035317E /* アバラシア雲海@1x.png */; };
+		C1986F6A2314FA350035317E /* アジムステップ@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F4F2314FA330035317E /* アジムステップ@1x.png */; };
+		C1986F6B2314FA350035317E /* クルザス西部高地@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F502314FA330035317E /* クルザス西部高地@2x.png */; };
+		C1986F6C2314FA350035317E /* ギラバニア湖畔地帯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F512314FA330035317E /* ギラバニア湖畔地帯@3x.png */; };
+		C1986F6D2314FA350035317E /* クルザス西部高地@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F522314FA330035317E /* クルザス西部高地@1x.png */; };
+		C1986F6E2314FA350035317E /* ドラヴァニア雲海@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F532314FA330035317E /* ドラヴァニア雲海@2x.png */; };
+		C1986F6F2314FA350035317E /* ギラバニア湖畔地帯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F542314FA330035317E /* ギラバニア湖畔地帯@2x.png */; };
+		C1986F702314FA350035317E /* ギラバニア山岳地帯@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F552314FA330035317E /* ギラバニア山岳地帯@1x.png */; };
+		C1986F712314FA350035317E /* 低地ドラヴァニア@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F562314FA340035317E /* 低地ドラヴァニア@2x.png */; };
+		C1986F722314FA350035317E /* ギラバニア辺境地帯@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F572314FA340035317E /* ギラバニア辺境地帯@2x.png */; };
+		C1986F732314FA350035317E /* アバラシア雲海@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F582314FA340035317E /* アバラシア雲海@3x.png */; };
+		C1986F742314FA350035317E /* ギラバニア山岳地帯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F592314FA340035317E /* ギラバニア山岳地帯@3x.png */; };
+		C1986F752314FA350035317E /* アバラシア雲海@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F5A2314FA340035317E /* アバラシア雲海@2x.png */; };
+		C1986F762314FA350035317E /* クルザス西部高地@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F5B2314FA340035317E /* クルザス西部高地@3x.png */; };
+		C1986F772314FA350035317E /* 高地ドラヴァニア@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F5C2314FA340035317E /* 高地ドラヴァニア@1x.png */; };
+		C1986F782314FA350035317E /* ギラバニア湖畔地帯@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F5D2314FA340035317E /* ギラバニア湖畔地帯@1x.png */; };
+		C1986F792314FA350035317E /* ギラバニア辺境地帯@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F5E2314FA340035317E /* ギラバニア辺境地帯@1x.png */; };
+		C1986F7A2314FA350035317E /* ギラバニア辺境地帯@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F5F2314FA340035317E /* ギラバニア辺境地帯@3x.png */; };
+		C1986F7B2314FA350035317E /* アジムステップ@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1986F602314FA350035317E /* アジムステップ@3x.png */; };
 		C1B3D24222F39BFD0077D0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */; };
 		C1B3D24422F39BFD0077D0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3D24322F39BFD0077D0B1 /* ViewController.swift */; };
 		C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3D24522F39BFD0077D0B1 /* Main.storyboard */; };
@@ -88,6 +115,33 @@
 		C13D055122F5450000CE5E09 /* WorklistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorklistViewController.xib; sourceTree = "<group>"; };
 		C13D055422F578F700CE5E09 /* WorklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorklistTableViewCell.swift; sourceTree = "<group>"; };
 		C13D055522F578F700CE5E09 /* WorklistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorklistTableViewCell.xib; sourceTree = "<group>"; };
+		C1986F462314FA320035317E /* アジムステップ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アジムステップ@2x.png"; sourceTree = "<group>"; };
+		C1986F472314FA320035317E /* ドラヴァニア雲海@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ドラヴァニア雲海@3x.png"; sourceTree = "<group>"; };
+		C1986F482314FA330035317E /* 低地ドラヴァニア@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "低地ドラヴァニア@3x.png"; sourceTree = "<group>"; };
+		C1986F492314FA330035317E /* 高地ドラヴァニア@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "高地ドラヴァニア@3x.png"; sourceTree = "<group>"; };
+		C1986F4A2314FA330035317E /* 低地ドラヴァニア@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "低地ドラヴァニア@1x.png"; sourceTree = "<group>"; };
+		C1986F4B2314FA330035317E /* ドラヴァニア雲海@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ドラヴァニア雲海@1x.png"; sourceTree = "<group>"; };
+		C1986F4C2314FA330035317E /* 高地ドラヴァニア@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "高地ドラヴァニア@2x.png"; sourceTree = "<group>"; };
+		C1986F4D2314FA330035317E /* ギラバニア山岳地帯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア山岳地帯@2x.png"; sourceTree = "<group>"; };
+		C1986F4E2314FA330035317E /* アバラシア雲海@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アバラシア雲海@1x.png"; sourceTree = "<group>"; };
+		C1986F4F2314FA330035317E /* アジムステップ@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アジムステップ@1x.png"; sourceTree = "<group>"; };
+		C1986F502314FA330035317E /* クルザス西部高地@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "クルザス西部高地@2x.png"; sourceTree = "<group>"; };
+		C1986F512314FA330035317E /* ギラバニア湖畔地帯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア湖畔地帯@3x.png"; sourceTree = "<group>"; };
+		C1986F522314FA330035317E /* クルザス西部高地@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "クルザス西部高地@1x.png"; sourceTree = "<group>"; };
+		C1986F532314FA330035317E /* ドラヴァニア雲海@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ドラヴァニア雲海@2x.png"; sourceTree = "<group>"; };
+		C1986F542314FA330035317E /* ギラバニア湖畔地帯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア湖畔地帯@2x.png"; sourceTree = "<group>"; };
+		C1986F552314FA330035317E /* ギラバニア山岳地帯@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア山岳地帯@1x.png"; sourceTree = "<group>"; };
+		C1986F562314FA340035317E /* 低地ドラヴァニア@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "低地ドラヴァニア@2x.png"; sourceTree = "<group>"; };
+		C1986F572314FA340035317E /* ギラバニア辺境地帯@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア辺境地帯@2x.png"; sourceTree = "<group>"; };
+		C1986F582314FA340035317E /* アバラシア雲海@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アバラシア雲海@3x.png"; sourceTree = "<group>"; };
+		C1986F592314FA340035317E /* ギラバニア山岳地帯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア山岳地帯@3x.png"; sourceTree = "<group>"; };
+		C1986F5A2314FA340035317E /* アバラシア雲海@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アバラシア雲海@2x.png"; sourceTree = "<group>"; };
+		C1986F5B2314FA340035317E /* クルザス西部高地@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "クルザス西部高地@3x.png"; sourceTree = "<group>"; };
+		C1986F5C2314FA340035317E /* 高地ドラヴァニア@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "高地ドラヴァニア@1x.png"; sourceTree = "<group>"; };
+		C1986F5D2314FA340035317E /* ギラバニア湖畔地帯@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア湖畔地帯@1x.png"; sourceTree = "<group>"; };
+		C1986F5E2314FA340035317E /* ギラバニア辺境地帯@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア辺境地帯@1x.png"; sourceTree = "<group>"; };
+		C1986F5F2314FA340035317E /* ギラバニア辺境地帯@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギラバニア辺境地帯@3x.png"; sourceTree = "<group>"; };
+		C1986F602314FA350035317E /* アジムステップ@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アジムステップ@3x.png"; sourceTree = "<group>"; };
 		C1B3D23E22F39BFD0077D0B1 /* eotime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eotime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B3D24322F39BFD0077D0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +210,40 @@
 			path = etimeFunc;
 			sourceTree = "<group>";
 		};
+		C1986F452314ADAB0035317E /* map */ = {
+			isa = PBXGroup;
+			children = (
+				C1986F4F2314FA330035317E /* アジムステップ@1x.png */,
+				C1986F462314FA320035317E /* アジムステップ@2x.png */,
+				C1986F602314FA350035317E /* アジムステップ@3x.png */,
+				C1986F4E2314FA330035317E /* アバラシア雲海@1x.png */,
+				C1986F5A2314FA340035317E /* アバラシア雲海@2x.png */,
+				C1986F582314FA340035317E /* アバラシア雲海@3x.png */,
+				C1986F5D2314FA340035317E /* ギラバニア湖畔地帯@1x.png */,
+				C1986F542314FA330035317E /* ギラバニア湖畔地帯@2x.png */,
+				C1986F512314FA330035317E /* ギラバニア湖畔地帯@3x.png */,
+				C1986F552314FA330035317E /* ギラバニア山岳地帯@1x.png */,
+				C1986F4D2314FA330035317E /* ギラバニア山岳地帯@2x.png */,
+				C1986F592314FA340035317E /* ギラバニア山岳地帯@3x.png */,
+				C1986F5E2314FA340035317E /* ギラバニア辺境地帯@1x.png */,
+				C1986F572314FA340035317E /* ギラバニア辺境地帯@2x.png */,
+				C1986F5F2314FA340035317E /* ギラバニア辺境地帯@3x.png */,
+				C1986F522314FA330035317E /* クルザス西部高地@1x.png */,
+				C1986F502314FA330035317E /* クルザス西部高地@2x.png */,
+				C1986F5B2314FA340035317E /* クルザス西部高地@3x.png */,
+				C1986F4B2314FA330035317E /* ドラヴァニア雲海@1x.png */,
+				C1986F532314FA330035317E /* ドラヴァニア雲海@2x.png */,
+				C1986F472314FA320035317E /* ドラヴァニア雲海@3x.png */,
+				C1986F5C2314FA340035317E /* 高地ドラヴァニア@1x.png */,
+				C1986F4C2314FA330035317E /* 高地ドラヴァニア@2x.png */,
+				C1986F492314FA330035317E /* 高地ドラヴァニア@3x.png */,
+				C1986F4A2314FA330035317E /* 低地ドラヴァニア@1x.png */,
+				C1986F562314FA340035317E /* 低地ドラヴァニア@2x.png */,
+				C1986F482314FA330035317E /* 低地ドラヴァニア@3x.png */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
 		C1B3D23522F39BFD0077D0B1 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +268,7 @@
 		C1B3D24022F39BFD0077D0B1 /* eotime */ = {
 			isa = PBXGroup;
 			children = (
+				C1986F452314ADAB0035317E /* map */,
 				C13D053622F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png */,
 				C1B3D24122F39BFD0077D0B1 /* AppDelegate.swift */,
 				C1B3D24322F39BFD0077D0B1 /* ViewController.swift */,
@@ -329,12 +418,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1986F772314FA350035317E /* 高地ドラヴァニア@1x.png in Resources */,
+				C1986F7B2314FA350035317E /* アジムステップ@3x.png in Resources */,
+				C1986F6B2314FA350035317E /* クルザス西部高地@2x.png in Resources */,
+				C1986F6C2314FA350035317E /* ギラバニア湖畔地帯@3x.png in Resources */,
 				C13D055722F578F700CE5E09 /* WorklistTableViewCell.xib in Resources */,
+				C1986F6F2314FA350035317E /* ギラバニア湖畔地帯@2x.png in Resources */,
+				C1986F6A2314FA350035317E /* アジムステップ@1x.png in Resources */,
+				C1986F722314FA350035317E /* ギラバニア辺境地帯@2x.png in Resources */,
+				C1986F652314FA350035317E /* 低地ドラヴァニア@1x.png in Resources */,
+				C1986F752314FA350035317E /* アバラシア雲海@2x.png in Resources */,
+				C1986F692314FA350035317E /* アバラシア雲海@1x.png in Resources */,
+				C1986F732314FA350035317E /* アバラシア雲海@3x.png in Resources */,
+				C1986F6E2314FA350035317E /* ドラヴァニア雲海@2x.png in Resources */,
+				C1986F612314FA350035317E /* アジムステップ@2x.png in Resources */,
+				C1986F742314FA350035317E /* ギラバニア山岳地帯@3x.png in Resources */,
+				C1986F6D2314FA350035317E /* クルザス西部高地@1x.png in Resources */,
+				C1986F662314FA350035317E /* ドラヴァニア雲海@1x.png in Resources */,
 				C1B3D24F22F39BFF0077D0B1 /* LaunchScreen.storyboard in Resources */,
 				C1B3D24C22F39BFF0077D0B1 /* Assets.xcassets in Resources */,
+				C1986F682314FA350035317E /* ギラバニア山岳地帯@2x.png in Resources */,
+				C1986F792314FA350035317E /* ギラバニア辺境地帯@1x.png in Resources */,
+				C1986F622314FA350035317E /* ドラヴァニア雲海@3x.png in Resources */,
+				C1986F712314FA350035317E /* 低地ドラヴァニア@2x.png in Resources */,
+				C1986F642314FA350035317E /* 高地ドラヴァニア@3x.png in Resources */,
+				C1986F762314FA350035317E /* クルザス西部高地@3x.png in Resources */,
 				C1B3D24722F39BFD0077D0B1 /* Main.storyboard in Resources */,
 				C13D053722F4215400CE5E09 /* LaunchImage-1125@3x~iphoneX-portrait_1125x2436.png in Resources */,
+				C1986F632314FA350035317E /* 低地ドラヴァニア@3x.png in Resources */,
+				C1986F782314FA350035317E /* ギラバニア湖畔地帯@1x.png in Resources */,
+				C1986F672314FA350035317E /* 高地ドラヴァニア@2x.png in Resources */,
+				C1986F702314FA350035317E /* ギラバニア山岳地帯@1x.png in Resources */,
 				C1B3D25922F3A4830077D0B1 /* MainViewController.xib in Resources */,
+				C1986F7A2314FA350035317E /* ギラバニア辺境地帯@3x.png in Resources */,
 				C13D055322F5450000CE5E09 /* WorklistViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
